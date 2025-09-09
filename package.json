@@ -1,6 +1,7 @@
 {
   "name": "testtask-wiam",
   "private": true,
+  "author": "Dmirty Kozhevnikov - https://www.linkedin.com/in/dmitry-kozh/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +11,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.87.1",
+    "@tanstack/react-query-devtools": "^5.87.3",
     "antd": "^5.27.3",
+    "axios": "^1.11.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.8.2",
