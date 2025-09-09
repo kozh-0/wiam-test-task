@@ -13,4 +13,4 @@
 
 На задание потрачено ~7 часов
 
-[Vercel hosting](https://wiam-test-task-821kqnzpg-kozh0s-projects.vercel.app/)
+[Vercel hosting](https://wiam-test-task-vert.vercel.app/)
