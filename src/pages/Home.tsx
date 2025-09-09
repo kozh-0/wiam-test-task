@@ -1,11 +1,12 @@
-import MainForm from "../Components/MainForm";
+import { Typography } from "antd";
+import LoanApplicationForm from "../Components/LoanApplicationForm";
 
 export const Home = () => {
   return (
     <div>
-      <h2>Home</h2>
+      <Typography.Title level={2}>Заявка на займ</Typography.Title>
 
-      <MainForm />
+      <LoanApplicationForm />
     </div>
   );
 };
