@@ -24,9 +24,9 @@ export const useFormSubmission = (message: MessageInstance) => {
     onError: (error) => {
       if (axios.isAxiosError(error)) {
         const errorMessage = error.response?.data?.message || error.message;
-        message.error(`Ошибка при отправке заявки: ${errorMessage}`);
+        message.error(`Application error: ${errorMessage}`);
       } else {
-        message.error("Неизвестная ошибка при отправке заявки");
+        message.error("Unknown application error");
       }
     },
   });

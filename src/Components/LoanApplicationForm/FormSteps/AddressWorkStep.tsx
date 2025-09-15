@@ -9,16 +9,16 @@ export const AddressWorkStep = () => {
   return (
     <>
       {contextHolder}
-      <Form.Item name="workplace" label="Место работы:" rules={[{ validator: requiredValidator }]}>
-        <Select placeholder="Выберите место работы:" loading={loading} options={categories} />
+      <Form.Item name="workplace" label="Workplace:" rules={[{ validator: requiredValidator }]}>
+        <Select placeholder="Choose a workplace:" loading={loading} options={categories} />
       </Form.Item>
 
       <Form.Item
         name="address"
-        label="Адрес проживания:"
+        label="Address:"
         rules={[{ validator: requiredValidator }]}
       >
-        <Input.TextArea rows={3} placeholder="Введите ваш адрес:" />
+        <Input.TextArea rows={3} placeholder="Enter your address:" />
       </Form.Item>
     </>
   );

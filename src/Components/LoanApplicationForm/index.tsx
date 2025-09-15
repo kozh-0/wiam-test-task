@@ -21,7 +21,7 @@ export default function LoanApplicationForm() {
       setFormData((prev) => ({ ...prev, ...values }));
       setCurrentStep(currentStep + 1);
     } catch (error) {
-      console.error("Ошибка валидации:", error);
+      console.error("Validation err:", error);
     }
   };
 
@@ -37,10 +37,11 @@ export default function LoanApplicationForm() {
     console.log(res);
 
     modal.success({
-      title: "Заявка одобрена!",
+      title: "The application has been approved!",
       content: (
         <p>
-          Поздравляем, {res.title}. Вам одобрена сумма ${values.amount} на {values.term} дней.
+          Congratulations, {res.title}. You have been approved the amount of ${values.amount} for{" "}
+          {values.term} days.
         </p>
       ),
     });
@@ -70,17 +71,17 @@ export default function LoanApplicationForm() {
           <Space style={{ marginTop: "24px", width: "100%", justifyContent: "space-between" }}>
             {currentStep > 0 && (
               <Button icon={<ArrowLeftOutlined />} onClick={prevStep}>
-                Назад
+                Back
               </Button>
             )}
 
             {currentStep < loanFormSteps.length - 1 ? (
               <Button type="primary" icon={<ArrowRightOutlined />} onClick={nextStep}>
-                Далее
+                Next
               </Button>
             ) : (
               <Button type="primary" loading={loading} onClick={() => form.submit()}>
-                Подать заявку
+                Apply
               </Button>
             )}
           </Space>

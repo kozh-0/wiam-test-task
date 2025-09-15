@@ -15,7 +15,7 @@ interface HHCompaniesI {
 }
 
 export const useCategories = (message: MessageInstance) => {
-  // * Переиспользовать можно сам хук, либо в коде брать кэш уже загруженных данных
+  // * You can reuse this hook or just grab chache of fetched data by...
   // * const queryClient = useQueryClient();
   // * const categories = queryClient.getQueryData(['categories']);
 
@@ -37,15 +37,14 @@ export const useCategories = (message: MessageInstance) => {
       } catch (error) {
         if (axios.isAxiosError(error)) {
           const errorMessage = error.response?.data?.message || error.message;
-          message.error(`Не удалось загрузить категории: ${errorMessage}`);
+          message.error(`Not able to load categories: ${errorMessage}`);
         }
-        message.error("Не удалось загрузить категории: неизвестная ошибка");
-        // * Из РФ запросы не всегда проходят сделал fallback, с VPN проблем нет
+        message.error("Not able to load categories: unknown err");
+        // * I made a fallback data in case query won't load, this query might require a VPN
         return ["SberTech", "Yandex", "Google", "Amazon"].map((el) => ({ label: el, value: el }));
       }
     },
     retry: (failureCount, error) => {
-      // Не повторяем запрос для 404 ошибок
       if (error.message.includes("404") || error.message.includes("Not Found")) {
         return false;
       }

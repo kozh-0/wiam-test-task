@@ -5,7 +5,7 @@ export const LoanParamsStep = () => (
   <>
     <Form.Item
       name="amount"
-      label="Сумма займа ($):"
+      label="Loan amount ($):"
       rules={[{ validator: requiredValidator }]}
       initialValue={200}
     >
@@ -23,7 +23,7 @@ export const LoanParamsStep = () => (
 
     <Form.Item
       name="term"
-      label="Срок займа (дней):"
+      label="Loan term (in days):"
       rules={[{ validator: requiredValidator }]}
       initialValue={10}
     >

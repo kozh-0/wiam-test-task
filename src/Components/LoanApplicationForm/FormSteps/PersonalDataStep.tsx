@@ -3,25 +3,25 @@ import { phoneValidator, requiredValidator } from "./validation";
 
 export const PersonalDataStep = () => (
   <>
-    <Form.Item name="firstName" label="Имя:" rules={[{ validator: requiredValidator }]}>
+    <Form.Item name="firstName" label="Name:" rules={[{ validator: requiredValidator }]}>
       <Input />
     </Form.Item>
 
-    <Form.Item name="lastName" label="Фамилия:" rules={[{ validator: requiredValidator }]}>
+    <Form.Item name="lastName" label="Family name:" rules={[{ validator: requiredValidator }]}>
       <Input />
     </Form.Item>
 
-    <Form.Item name="gender" label="Пол:" rules={[{ validator: requiredValidator }]}>
+    <Form.Item name="gender" label="Sex:" rules={[{ validator: requiredValidator }]}>
       <Select
-        placeholder="Выберите пол"
+        placeholder="Choose your sex"
         options={[
-          { label: "Мужской", value: "male" },
-          { label: "Женский", value: "female" },
+          { label: "Male", value: "male" },
+          { label: "Female", value: "female" },
         ]}
       />
     </Form.Item>
 
-    <Form.Item name="phone" label="Телефон:" rules={[{ validator: phoneValidator }]}>
+    <Form.Item name="phone" label="Phone:" rules={[{ validator: phoneValidator }]}>
       <Input placeholder="0XXX XXX XXX" />
     </Form.Item>
   </>

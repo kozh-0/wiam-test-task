@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Создаем экземпляр axios с базовой конфигурацией
+// Creation of base axios config
 export const apiClient = axios.create({
   baseURL: "https://dummyjson.com",
   timeout: 10000,

@@ -5,17 +5,17 @@ import { PersonalDataStep } from "./PersonalDataStep";
 
 export const loanFormSteps = [
   {
-    title: "Личные данные",
+    title: "Personal data",
     icon: <UserOutlined />,
     component: PersonalDataStep,
   },
   {
-    title: "Адрес и работа",
+    title: "Address and work",
     icon: <HomeOutlined />,
     component: AddressWorkStep,
   },
   {
-    title: "Параметры займа",
+    title: "Loan params",
     icon: <DollarOutlined />,
     component: LoanParamsStep,
   },

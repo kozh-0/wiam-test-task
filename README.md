@@ -1,16 +1,16 @@
 # WIAM Test task (React + TypeScript + Vite)
 
-## Запуск проекта
+## How to start
 
-`npm run dev` - запуск в режиме разработчика  
-`npm run build && npm run preview` - запуск в продакшн режиме
+`npm run dev` - run project in development mode
+`npm run build && npm run preview` - run project in production mode
 
-Помимо [основного задания](https://drive.google.com/file/d/15iUFvEGMVJJaln9RK0tHnyYj5Ii9ZQ8o/view), в приложении добавлено:
+Besides [the main task](https://drive.google.com/file/d/15iUFvEGMVJJaln9RK0tHnyYj5Ii9ZQ8o/view), I added:
 
-- Страница "О себе"
-- Светлая/Темная тема
-- ErrorBoundary при поломке приложения пользователь не остается без ответа
+- "About" page
+- Dark/Light theme
+- ErrorBoundary
 
-На задание потрачено ~7 часов
+~7 hours spent on this test task
 
 [Vercel hosting](https://wiam-test-task-vert.vercel.app/)

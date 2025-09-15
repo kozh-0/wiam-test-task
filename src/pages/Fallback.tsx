@@ -24,26 +24,26 @@ export default class ErrorBoundary extends Component<{ children: React.ReactNode
       return (
         <Result
           status="error"
-          title="Что-то пошло совсем не так!"
-          subTitle="Пожалуйста передайте разработчику..."
+          title="Something went very wrong!"
+          subTitle="Please tell the developer..."
         >
           <Paragraph style={{ textAlign: "center" }}>
-            Ссылка на страницу с поломкой 👉👉👉{" "}
+            Crash link 👉👉👉{" "}
             <Text copyable strong>
               {document.URL}
             </Text>
             <div style={{ margin: "20px 0 7px 0" }}>
-              Для дальнейшего взаимодействия с сайтом предлагаем...
+              For further interaction with the site, we suggest...
             </div>
             <Button
               type="primary"
               onClick={() => window.location.reload()}
               style={{ marginRight: "10px" }}
             >
-              Перезагрузить страницу
+              Reload the page
             </Button>
             <Button type="dashed" href="/">
-              Вернуться на главную
+              Go back to the main page
             </Button>
           </Paragraph>
         </Result>
